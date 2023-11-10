@@ -2,7 +2,7 @@ version: '3.9'
 
 services:
   django:
-    image: dojo-deploy:0.0.1
+    image: dojo-deploy:1.0
     build: .
     ports:
       - "8000:8000"

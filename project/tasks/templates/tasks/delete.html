@@ -1,0 +1,58 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+<style>
+	body{
+		background-color: #dfece6;
+	}
+	.delete{
+		width:500px;
+		margin: 20px auto;
+		padding:20px;
+		background-color: #3ca2a2;
+		border-radius: 3px;
+		box-shadow: 6px 2px 30px 0px rgba(0,0,0,0.75);
+
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+
+	p{
+		font-size: 23px;
+	}
+
+	.juntos{
+		display: flex;
+		justify-content: center;
+		justify-content: space-around;
+	}
+
+	.envio{
+		background-color: #215a6d;
+	}
+	
+	a{
+		margin-bottom: 15px;
+	}
+	.tamanho{
+		width: 100px;
+	}
+
+</style>
+
+<body>
+	<div class="delete">
+		<p>Are you sure you want to delete "{{item}}"?</p>
+		
+		<div class="juntos">
+			
+			<form method="POST" action="">
+				{% csrf_token %}
+				<input class="btn btn-sm btn-info envio tamanho" type="submit" name="Confirm">
+			</form>
+			
+			<a class="btn btn-sm btn-danger cancelar tamanho" href="{% url 'list' %}" >Cancel</a>
+		</div>
+	</div>
+</body>
