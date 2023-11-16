@@ -34,7 +34,7 @@ Docker é um conjunto de produtos de plataforma como serviço que usam virtualiz
 
 ### Comandos usados
 1. Criar imagem pelo docker compose
-   ```docker-compose up –build```
+   ```docker-compose up --build```
 
 ### Comandos adicionais
 1. Criar imagem
